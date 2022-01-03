@@ -17,13 +17,23 @@ final class CodelyberTest extends TestCase
         self::assertEquals("CodelyTV", $codelyber->greet());
     }
 
-    /** @test
-     * @group disabled
-     */
+    /** @test */
     public function itShouldReturnName(): void
     {
         $codelyber = new Codelyber("Javi");
 
         self::assertEquals("Javi", $codelyber->name());
+    }
+
+    /** @test
+     * @group disabled
+     */
+    public function diferentAsertionsTest(): void
+    {
+        $codelyber = new Codelyber("Josep");
+        $codelyber2 = new Codelyber("Josep");
+
+        self::assertEquals($codelyber, $codelyber2); // this is true
+        self::assertSame($codelyber, $codelyber2); // this is false
     }
 }
