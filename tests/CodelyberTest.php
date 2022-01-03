@@ -16,4 +16,14 @@ final class CodelyberTest extends TestCase
 
         self::assertEquals("CodelyTV", $codelyber->greet());
     }
+
+    /** @test
+     * @group disabled
+     */
+    public function itShouldReturnName(): void
+    {
+        $codelyber = new Codelyber("Javi");
+
+        self::assertEquals("Javi", $codelyber->name());
+    }
 }
