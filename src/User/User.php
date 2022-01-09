@@ -7,14 +7,14 @@ final class User
 {
     private const MIN_LEVEL_TO_EDIT = 3;
 
-    private UserId $id;
-    private UserName $name;
+    private UserId      $id;
+    private UserName    $name;
     private AccessLevel $accessLevel;
 
     public function __construct(UserId $id, UserName $name, AccessLevel $accessLevel)
     {
-        $this->id = $id;
-        $this->name = $name;
+        $this->id          = $id;
+        $this->name        = $name;
         $this->accessLevel = $accessLevel;
     }
 

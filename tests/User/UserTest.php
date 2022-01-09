@@ -30,7 +30,7 @@ class UserTest extends TestCase
     public function userGetId(): void
     {
         $userId = new UserId('1');
-        $user = UserMother::create(new UserId('1'), new UserName('Josep'), new AccessLevel(1));
+        $user   = UserMother::create(new UserId('1'), new UserName('Josep'), new AccessLevel(1));
         self::assertEquals($userId, $user->getId());
     }
 
@@ -38,7 +38,7 @@ class UserTest extends TestCase
     public function userGetName(): void
     {
         $userName = new UserName('Josep');
-        $user = UserMother::create(new UserId('1'), new UserName('Josep'), new AccessLevel(1));
+        $user     = UserMother::create(new UserId('1'), new UserName('Josep'), new AccessLevel(1));
         self::assertEquals($userName, $user->getName());
     }
 
@@ -46,7 +46,7 @@ class UserTest extends TestCase
     public function userGetAccessLevel(): void
     {
         $accessLevel = new AccessLevel(1);
-        $user = UserMother::create(new UserId('1'), new UserName('Josep'), new AccessLevel(1));
+        $user        = UserMother::create(new UserId('1'), new UserName('Josep'), new AccessLevel(1));
         self::assertEquals($accessLevel, $user->getAccessLevel());
     }
 
@@ -54,13 +54,13 @@ class UserTest extends TestCase
     public function userNameGetValue(): void
     {
         $userName = new UserName('Josep');
-        self::assertEquals($userName->getValue(), 'Josep');
+        self::assertEquals('Josep', $userName->getValue());
     }
 
     /** @test */
     public function userIdGetValue(): void
     {
         $userId = new UserId('1');
-        self::assertEquals($userId->getValue(), '1');
+        self::assertEquals('1', $userId->getValue());
     }
 }

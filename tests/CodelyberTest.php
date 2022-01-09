@@ -30,7 +30,7 @@ final class CodelyberTest extends TestCase
      */
     public function diferentAsertionsTest(): void
     {
-        $codelyber = new Codelyber("Josep");
+        $codelyber  = new Codelyber("Josep");
         $codelyber2 = new Codelyber("Josep");
 
         self::assertEquals($codelyber, $codelyber2); // this is true
